@@ -1,0 +1,17 @@
+export default function Parent() {
+  const [name, setName] = useState('');
+
+  return (
+    <div>
+      <label htmlFor="name-input">Enter your name:</label>
+      <input
+        id="name-input"
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Type your name"
+      />
+      <p>Your name: {name}</p>
+    </div>
+  );
+}
